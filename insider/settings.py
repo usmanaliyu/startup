@@ -153,7 +153,7 @@ CACHE_MIDDLEWARE_SECONDS = 120
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
-STATIC_URL = 'https://csb1cb3400a01f8x41daxb05.blob.core.windows.net/static/'
+STATIC_URL = 'static/'
 STATICFILES_DIRS =[
     os.path.join(BASE_DIR,'static/')
 ]
