@@ -1,0 +1,480 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load thumbnail%}
+{% load crispy_forms_tags %}
+{% block title %}
+{{ instance.title }}
+{% endblock %}
+{% block content %}
+
+
+
+
+<section class="section gb ">
+            <div class="container">
+                <div class="boxed">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="content blog-list">
+                                <div class="blog-wrapper clearfix">
+                                    <div class="blog-meta">
+                                        <small><a href="{{ instance.category.get_absolute_url }}">{{ instance.category }}</a></small>
+
+
+
+                                        <h3 >{{ instance.title }}</h3>
+                                        <ul class="list-inline">
+                                            <li>{{ instance.pub_date}}</li>
+
+                                        </ul>
+                                    </div><!-- end blog-meta -->
+
+                                    <div class="blog-media">
+                                        <img src=" {% if instance.preview_image %} {{ instance.preview_image.url }} {% endif %}" alt="" class="img-responsive img-rounded">
+                                    </div><!-- end media -->
+
+                                    <div class="blog-desc-big">
+
+                                        <p>{{ instance.title_body1 }}</p>
+
+
+                                        <blockquote class="text-center">
+  {{ instance.summary}}
+</blockquote>
+
+
+                                        <p>{{ instance.title_body2 }}</p>
+
+    {% if instance.part1 %}                                    <p>{{ instance.title_body3 }}</p>
+<h4><big>{{ instance.sub1 }}</big></h4>
+<h5><big>{{ instance.sub1_child1 }}</big></h5>
+<p>{{ instance.sub1_child1_body }}</P>
+
+  {% if instance.sub1_child1_image %}
+<div class="blog-media">
+<img src="  {{ instance.sub1_child1_image.url }} " alt="" class="img-responsive img-rounded">
+</div><!-- end media -->
+{% endif %}
+
+<h5><big>{{ instance.sub1_child2 }}</big></h5>
+<p>{{ instance.sub1_child2_body }}</P>
+
+  {% if instance.sub1_child2_image %}
+<div class="blog-media">
+<img src="  {{ instance.sub1_child2_image.url }} " alt="" class="img-responsive img-rounded">
+</div><!-- end media -->
+{% endif %}
+
+<h5><big>{{ instance.sub1_child3 }}</big></h5>
+<p>{{ instance.sub1_child3_body }}</P>
+
+  {% if instance.sub1_child3_image %}
+<div class="blog-media">
+<img src="  {{ instance.sub1_child3_image.url }} " alt="" class="img-responsive img-rounded">
+</div><!-- end media -->
+{% endif %}
+
+<h5><big>{{ instance.sub1_child4 }}</big></h5>
+<p>{{ instance.sub1_child4_body }}</P>
+
+  {% if instance.sub1_child4_image %}
+<div class="blog-media">
+<img src="  {{ instance.sub1_child4_image.url }} " alt="" class="img-responsive img-rounded">
+</div><!-- end media -->
+{% endif %}
+
+<h5><big>{{ instance.sub1_child5 }}</big></h5>
+<p>{{ instance.sub1_child5_body }}</P>
+
+  {% if instance.sub1_child5_image %}
+<div class="blog-media">
+<img src="  {{ instance.sub1_child5_image.url }} " alt="" class="img-responsive img-rounded">
+</div><!-- end media -->
+{% endif %}
+
+
+  {% if instance.blockquote1 %}
+<blockquote class="text-center">
+  {{ instance.blockquote1}}
+</blockquote>
+{% endif %}
+                                        {% endif %}
+
+
+
+
+
+{% if instance.part2 %}
+
+<h4><big>{{ instance.sub2 }}</big></h4>
+<h5><big>{{ instance.sub2_child1 }}</big></h5>
+<p>{{ instance.sub2_child1_body }}</P>
+
+  {% if instance.sub2_child1_image %}
+<div class="blog-media">
+<img src="  {{ instance.sub2_child1_image.url }} " alt="" class="img-responsive img-rounded">
+</div><!-- end media -->
+{% endif %}
+
+<h5><big>{{ instance.sub2_child2 }}</big></h5>
+<p>{{ instance.sub2_child2_body }}</P>
+
+  {% if instance.sub2_child2_image %}
+<div class="blog-media">
+<img src="  {{ instance.sub2_child2_image.url }} " alt="" class="img-responsive img-rounded">
+</div><!-- end media -->
+{% endif %}
+
+<h5><big>{{ instance.sub2_child3 }}</big></h5>
+<p>{{ instance.sub2_child3_body }}</P>
+
+  {% if instance.sub2_child3_image %}
+<div class="blog-media">
+<img src="  {{ instance.sub2_child3_image.url }} " alt="" class="img-responsive img-rounded">
+</div><!-- end media -->
+{% endif %}
+
+<h5><big>{{ instance.sub2_child4 }}</big></h5>
+<p>{{ instance.sub2_child4_body }}</P>
+
+  {% if instance.sub2_child4_image %}
+<div class="blog-media">
+<img src="  {{ instance.sub2_child4_image.url }} " alt="" class="img-responsive img-rounded">
+</div><!-- end media -->
+{% endif %}
+
+<h5><big>{{ instance.sub2_child5 }}</big></h5>
+<p>{{ instance.sub2_child5_body }}</P>
+
+  {% if instance.sub2_child5_image %}
+<div class="blog-media">
+<img src="  {{ instance.sub2_child5_image.url }} " alt="" class="img-responsive img-rounded">
+</div><!-- end media -->
+{% endif %}
+
+
+{% if instance.blockquote2 %}
+<blockquote class="text-center">
+  {{ instance.blockquote2}}
+</blockquote>
+{% endif %}
+                                        {% endif %}
+
+
+
+
+
+{% if instance.part3 %}
+<h4><big>{{ instance.sub3 }}</big></h4>
+<h5><big>{{ instance.sub3_child1 }}</big></h5>
+<p>{{ instance.sub3_child1_body }}</P>
+
+  {% if instance.sub3_child1_image %}
+<div class="blog-media">
+<img src="  {{ instance.sub3_child1_image.url }} " alt="" class="img-responsive img-rounded">
+</div><!-- end media -->
+{% endif %}
+
+<h5><big>{{ instance.sub3_child2 }}</big></h5>
+<p>{{ instance.sub3_child2_body }}</P>
+
+  {% if instance.sub3_child2_image %}
+<div class="blog-media">
+<img src="  {{ instance.sub3_child2_image.url }} " alt="" class="img-responsive img-rounded">
+</div><!-- end media -->
+{% endif %}
+
+<h5><big>{{ instance.sub3_child3 }}</big></h5>
+<p>{{ instance.sub3_child3_body }}</P>
+
+  {% if instance.sub3_child3_image %}
+<div class="blog-media">
+<img src="  {{ instance.sub3_child3_image.url }} " alt="" class="img-responsive img-rounded">
+</div><!-- end media -->
+{% endif %}
+
+<h5><big>{{ instance.sub3_child4 }}</big></h5>
+<p>{{ instance.sub3_child4_body }}</P>
+
+  {% if instance.sub3_child4_image %}
+<div class="blog-media">
+<img src="  {{ instance.sub3_child4_image.url }} " alt="" class="img-responsive img-rounded">
+</div><!-- end media -->
+{% endif %}
+
+<h5><big>{{ instance.sub3_child5 }}</big></h5>
+<p>{{ instance.sub3_child5_body }}</P>
+
+  {% if instance.sub3_child5_image %}
+<div class="blog-media">
+<img src="  {{ instance.sub3_child5_image.url }} " alt="" class="img-responsive img-rounded">
+</div><!-- end media -->
+{% endif %}
+
+
+{% if instance.blockquote3 %}
+<blockquote class="text-center">
+  {{ instance.blockquote3 }}
+</blockquote>
+{% endif %}
+{% endif %}
+
+
+{% if instance.part4 %}
+<h4><big>{{ instance.sub4 }}</big></h4>
+<h5><big>{{ instance.sub4_child1 }}</big></h5>
+<p>{{ instance.sub4_child1_body }}</P>
+
+  {% if instance.sub4_child1_image %}
+<div class="blog-media">
+<img src="  {{ instance.sub4_child1_image.url }} " alt="" class="img-responsive img-rounded">
+</div><!-- end media -->
+{% endif %}
+
+<h5><big>{{ instance.sub4_child2 }}</big></h5>
+<p>{{ instance.sub4_child2_body }}</P>
+
+  {% if instance.sub4_child2_image %}
+<div class="blog-media">
+<img src="  {{ instance.sub4_child2_image.url }} " alt="" class="img-responsive img-rounded">
+</div><!-- end media -->
+{% endif %}
+
+<h5><big>{{ instance.sub4_child3 }}</big></h5>
+<p>{{ instance.sub4_child3_body }}</P>
+
+  {% if instance.sub4_child3_image %}
+<div class="blog-media">
+<img src="  {{ instance.sub4_child3_image.url }} " alt="" class="img-responsive img-rounded">
+</div><!-- end media -->
+{% endif %}
+
+<h5><big>{{ instance.sub4_child4 }}</big></h5>
+<p>{{ instance.sub4_child4_body }}</P>
+
+  {% if instance.sub4_child4_image %}
+<div class="blog-media">
+<img src="  {{ instance.sub4_child4_image.url }} " alt="" class="img-responsive img-rounded">
+</div><!-- end media -->
+{% endif %}
+
+<h5><big>{{ instance.sub4_child5 }}</big></h5>
+<p>{{ instance.sub4_child5_body }}</P>
+
+  {% if instance.sub4_child5_image %}
+<div class="blog-media">
+<img src="  {{ instance.sub4_child5_image.url }} " alt="" class="img-responsive img-rounded">
+</div><!-- end media -->
+{% endif %}
+
+
+
+{% if instance.blockquote4 %}
+<blockquote class="text-center">
+  {{ instance.blockquote4}}
+</blockquote>
+{% endif %}
+{% endif %}
+
+
+
+{% if instance.part5 %}
+<h4><big>{{ instance.sub5 }}</big></h4>
+<h5><big>{{ instance.sub5_child1 }}</big></h5>
+<p>{{ instance.sub5_child1_body }}</P>
+
+  {% if instance.sub5_child1_image %}
+<div class="blog-media">
+<img src="  {{ instance.sub5_child1_image.url }} " alt="" class="img-responsive img-rounded">
+</div><!-- end media -->
+{% endif %}
+
+<h5><big>{{ instance.sub5_child2 }}</big></h5>
+<p>{{ instance.sub5_child2_body }}</P>
+
+  {% if instance.sub5_child2_image %}
+<div class="blog-media">
+<img src="  {{ instance.sub5_child2_image.url }} " alt="" class="img-responsive img-rounded">
+</div><!-- end media -->
+{% endif %}
+
+<h5><big>{{ instance.sub5_child3 }}</big></h5>
+<p>{{ instance.sub5_child3_body }}</P>
+
+  {% if instance.sub5_child3_image %}
+<div class="blog-media">
+<img src="  {{ instance.sub5_child3_image.url }} " alt="" class="img-responsive img-rounded">
+</div><!-- end media -->
+{% endif %}
+
+<h5><big>{{ instance.sub5_child4 }}</big></h5>
+<p>{{ instance.sub5_child4_body }}</P>
+
+  {% if instance.sub5_child4_image %}
+<div class="blog-media">
+<img src="  {{ instance.sub5_child4_image.url }} " alt="" class="img-responsive img-rounded">
+</div><!-- end media -->
+{% endif %}
+
+<h5><big>{{ instance.sub5_child5 }}</big></h5>
+<p>{{ instance.sub5_child5_body }}</P>
+
+  {% if instance.sub5_child5_image %}
+<div class="blog-media">
+<img src="  {{ instance.sub5_child5_image.url }} " alt="" class="img-responsive img-rounded">
+</div><!-- end media -->
+{% endif %}
+                                        {% if instance.blockquote5 %}
+<blockquote class="text-center">
+  {{ instance.blockquote5}}
+</blockquote>
+{% endif %}
+                                        {% endif %}
+
+
+
+
+
+
+
+
+
+
+
+                                        <hr class="invis">
+
+
+                                        {% if instance.tags %}
+                                        <div class="tags-widget">
+                                            <ul class="list-inline">
+
+                                                {% for tag in instance.tags.all %}
+                                    <li><a href="{% url 'tagged' tag.slug%}">{{ tag.name}}</a></li>
+                                    {% endfor %}
+
+                                            </ul>
+                                        </div><!-- end list-widget -->
+                                        {% endif %}
+
+
+                                          {% if instance.link %}
+                                    <h3><span>Sources</span></h3>
+                                        <ul>
+
+                                        <li>{{ instance.link_name }}</li>
+                                            </ul>
+                                        {% endif %}
+
+                                    </div><!-- end desc -->
+                                </div><!-- end blog -->
+                            </div><!-- end content -->
+
+
+
+                            <div class="content boxed-comment clearfix">
+                                <h3 class="small-title">{{ comments.count }} Comment{{ comments.count|pluralize }}</h3>
+                                <div class="comments-list">
+
+
+                                    {% for comment in comments %}
+                                    <div class="media">
+                                        <p class="pull-right"><small>{{ comment.timestamp|timesince}} ago,</small></p>
+                                        <div class="media-body">
+                                            <h4 class="media-heading user_name">{{ comment.user}}</h4>
+                                            <p>{{ comment.content }}</p>
+
+                                        </div>
+                                    </div><hr>
+                                    {% endfor %}
+
+
+                                </div>
+                            </div><!-- end content -->
+
+
+
+
+
+                            <div class="content boxed-comment clearfix">
+                                <h3 class="small-title">Leave a Comment</h3>
+
+
+                                <form class="big-contact-form" name="contactForm" id="contactForm" method="post">
+                                    {% csrf_token %}
+
+                                    <div class="col-md-12">
+                                        {{ comment_form|crispy }}
+
+                                            <input  class="btn btn-primary" type="submit" value="Post Comment">
+                   <input type="hidden" name="next" value="{{ next }}">
+
+
+
+
+
+
+                                    </div>
+                                </form>
+                            </div><!-- end content -->
+
+                        </div><!-- end col -->
+
+
+
+
+                        <div class="sidebar col-md-4">
+
+
+
+                            <div class="widget clearfix">
+                                <h3 class="widget-title"><br>Similar Posts</h3>
+                                <div class="post-widget">
+
+                                    {% for instance in similar_posts %}
+
+                                    <div class="media">
+                                         {% thumbnail instance.preview_image "50x50" crop="center" as im %}
+                                        <img src="{% if instance.preview_image %}{{ im.url }}{% endif %}" width="{{ im.width }}" height="{{ im.height }} alt="" class="img-responsive alignleft img-rounded">
+                                        {% endthumbnail %}
+                                        <div class="media-body">
+                                            <h4 class="mt-0"><a href="{% url 'detail' instance.slug %}">{{ instance.title }}</a></h4>
+
+                                        </div>
+                                    </div>
+                                    {% empty %}
+                                    <p>No similar posts available. </p>
+                                    {% endfor %}
+
+
+
+                                </div><!-- end post-widget -->
+                            </div><!-- end widget -->
+
+                            <div class="widget clearfix">
+                                <h3 class="widget-title">Subscribe Our Newsletter</h3>
+                                <div class="newsletter-widget">
+                                    <p>You can opt out of our newsletters at any time. See our <a href="#">privacy policy</a>.</p>
+
+
+
+                                    <form class="form-inline" name="contactForm" id="contactForm" method="post">
+                                    {% csrf_token %}
+
+                                    <div class="col-md-12">
+                                        {{ sub|crispy }}
+
+                                    </div>
+                                    </form>
+
+
+                                </div><!-- end newsletter -->
+                            </div><!-- end widget -->
+
+
+                        </div><!-- end sidebar -->
+                    </div><!-- end row -->
+                </div><!-- end boxed -->
+            </div><!-- end container -->
+        </section>
+
+{% endblock %}
