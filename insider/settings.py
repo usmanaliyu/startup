@@ -103,7 +103,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'insiderdatabase',
-        'USER': 'usman150480@insider',
+        'USER': 'usman150480@insiderdatabase',
         'PASSWORD': 'abbatibabu1A',
         'HOST': 'insider.database.windows.net',
         'PORT': '3306',
