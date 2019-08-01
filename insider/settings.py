@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '@@yjye4@o03$@03(6_tg9n*wm9opcik#2_y@qs-^en(y!lcbe)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['africanstartup.azurewebsites.net']
 
@@ -160,7 +160,7 @@ STATICFILES_DIRS =[
 
 
 
-MEDIA_URL ='/media/'
+MEDIA_URL ='https://csb1cb3400a01f8x41daxb05.blob.core.windows.net/media'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 
