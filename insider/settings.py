@@ -99,24 +99,30 @@ WSGI_APPLICATION = 'insider.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-DATABASES = {
+import mysql.connector
+from mysql.connector import errorcode
 
-    'default': {
-
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-
-        'USER': 'usman150480',
-
-        'PASSWORD': 'abbatibabu1A',
-
-        'HOST': 'africanstartup.azurewebsites.net',
-
-        'PORT': '',
-
-    }
-
+# Obtain connection string information from the portal
+config = {
+  'host':'insider.database.windows.net',
+  'user':'usman150480@insider',
+  'password':'abbatibabu1A',
+  'database':'insiderdatabase'
 }
+
+# Construct connection string
+try:
+   conn = mysql.connector.connect(**config)
+   print("Connection established")
+except mysql.connector.Error as err:
+  if err.errno == errorcode.ER_ACCESS_DENIED_ERROR:
+    print("Something is wrong with the user name or password")
+  elif err.errno == errorcode.ER_BAD_DB_ERROR:
+    print("Database does not exist")
+  else:
+    print(err)
+else:
+  cursor = conn.cursor()
 
 
 # Password validation
