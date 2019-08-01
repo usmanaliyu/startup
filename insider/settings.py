@@ -172,7 +172,7 @@ STATICFILES_DIRS =[
 
 
 
-MEDIA_URL ='https://csb1cb3400a01f8x41daxb05.blob.core.windows.net/media/'
+MEDIA_URL ='/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 
