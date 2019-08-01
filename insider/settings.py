@@ -26,7 +26,7 @@ SECRET_KEY = '@@yjye4@o03$@03(6_tg9n*wm9opcik#2_y@qs-^en(y!lcbe)'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['africanstartup.azurewebsites.net']
+ALLOWED_HOSTS = ['africanstartup.azurewebsites.net','startup-africa.com','www.startup-africa.com']
 
 
 # Application definition

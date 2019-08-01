@@ -27,7 +27,7 @@ class Category(models.Model):
 class Article(models.Model):
     popular = models.CharField(max_length=50, blank=True, choices=(('true','True'),('false','False')))
     category = models.ForeignKey(Category,on_delete=models.CASCADE, default=1,)
-    preview_image = models.ImageField(upload_to='upload/',blank=True)
+    preview_image = models.ImageField(upload_to='https://csb1cb3400a01f8x41daxb05.blob.core.windows.net/static/upload/',blank=True)
     tags = TaggableManager()
     title = models.CharField(max_length=100)
     slug = models.SlugField(max_length=250, unique=True)
@@ -152,5 +152,3 @@ class Article(models.Model):
         instance = self
         content_type = ContentType.objects.get_for_model(instance.__class__)
         return content_type
-
-
