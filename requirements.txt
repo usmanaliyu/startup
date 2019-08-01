@@ -8,6 +8,7 @@ django-crispy-forms==1.7.2
 django-redis==4.10.0
 django-taggit==1.1.0
 idna==2.8
+mysql-connector-python-rf==2.2.2
 oauthlib==3.0.2
 Pillow==6.0.0
 python-memcached==1.59
