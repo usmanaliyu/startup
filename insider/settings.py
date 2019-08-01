@@ -101,17 +101,22 @@ WSGI_APPLICATION = 'insider.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'sql_server.pyodbc',
         'NAME': 'insiderdatabase',
-        'USER': 'usman150480@insiderdatabase',
+        'USER': 'usman150480@insider',
         'PASSWORD': 'abbatibabu1A',
         'HOST': 'insider.database.windows.net',
-        'PORT': '3306',
+        'PORT': '',
+
+
         'OPTIONS': {
-            'ssl': {'ssl-ca': '/var/www/html/BaltimoreCyberTrustRoot.crt.pem'}
-        }
-    }
+             'driver': 'ODBC Driver 13 for SQL Server',
+        },
+    },
 }
+
+# set this to False if you want to turn off pyodbc's connection pooling
+DATABASE_CONNECTION_POOLING = True
 
 
 # Password validation
