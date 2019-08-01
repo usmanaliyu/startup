@@ -118,7 +118,7 @@ DATABASES = {
 # set this to False if you want to turn off pyodbc's connection pooling
 DATABASE_CONNECTION_POOLING = True
 
-
+STATICFILES_STORAGE = ‘django.contrib.staticfiles.storage.CachedStaticFilesStorage’
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
 
