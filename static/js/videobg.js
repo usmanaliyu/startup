@@ -54,17 +54,17 @@ this.player.seekTo(0)}}}})(void 0);
 
 
         jQuery(document).ready(function($) {
-            var Video_back = new video_background($("#home"), { 
+            var Video_back = new video_background($("#home"), {
                 "position": "absolute", //Follow page scroll
                 "z-index": "-1",        //Behind everything
                 "loop": true,           //Loop when it reaches the end
                 "autoplay": true,       //Autoplay at start
                 "muted": true,          //Muted at start
-                "mp4":"static/upload/preview.mp4" ,     //Path to video mp4 format
-                "ogg":"static/upload/preview.ogg" ,     //Path to video ogg format
-                "webm":"static/upload/preview.webm" ,     //Path to video webm format
+                "mp4":"https://csb1cb3400a01f8x41daxb05.blob.core.windows.net/static/upload/preview.mp4" ,     //Path to video mp4 format
+                "ogg":"https://csb1cb3400a01f8x41daxb05.blob.core.windows.net/static/upload/preview.ogg" ,     //Path to video ogg format
+                "webm":"https://csb1cb3400a01f8x41daxb05.blob.core.windows.net/static/upload/preview.webm" ,     //Path to video webm format
                 "video_ratio": 1.7778,              // width/height -> If none provided sizing of the video is set to adjust
-                "fallback_image": "static/upload/tags.jpg",   //Fallback image path
+                "fallback_image": "https://csb1cb3400a01f8x41daxb05.blob.core.windows.net/static/upload/tags.jpg",   //Fallback image path
                 "priority": "html5"             //Priority for html5 (if set to flash and tested locally will give a flash security error)
             });
         });
