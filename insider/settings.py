@@ -110,8 +110,7 @@ DATABASES = {
 
 
         'OPTIONS': {
-             'driver': 'FreeTDS',
-            'host_is_server': True,
+             'driver': 'ODBC Driver 17 for SQL Server',
         },
     },
 }
