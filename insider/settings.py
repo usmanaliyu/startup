@@ -100,10 +100,22 @@ WSGI_APPLICATION = 'insider.wsgi.application'
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 DATABASES = {
+
     'default': {
+
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+
+        'USER': 'usman150480',
+
+        'PASSWORD': 'abbatibabu1A',
+
+        'HOST': 'africanstartup.azurewebsites.net',
+
+        'PORT': '',
+
     }
+
 }
 
 
@@ -153,14 +165,14 @@ CACHE_MIDDLEWARE_SECONDS = 120
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
-STATIC_URL = 'https://csb1cb3400a01f8x41daxb05.blob.core.windows.net/static'
+STATIC_URL = 'https://csb1cb3400a01f8x41daxb05.blob.core.windows.net/static/'
 STATICFILES_DIRS =[
     os.path.join(BASE_DIR,'static/')
 ]
 
 
 
-MEDIA_URL ='https://csb1cb3400a01f8x41daxb05.blob.core.windows.net/media'
+MEDIA_URL ='https://csb1cb3400a01f8x41daxb05.blob.core.windows.net/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 
